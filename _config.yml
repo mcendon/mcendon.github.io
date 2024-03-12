@@ -16,9 +16,9 @@ minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon
 
 # Site Settings
 locale: "es-ES"
-title: "Maureadas"
+title: "Mauro Cendon Hidalgo's Blog"
 title_separator: "-"
-subtitle: "Blog" # site tagline that appears below site title in masthead
+subtitle: "mcendon.github.io" # site tagline that appears below site title in masthead
 name: "Mauro Cendon Hidalgo"
 description: "Blog"
 url: "https://mcendon.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -95,7 +95,7 @@ analytics:
 author:
   name: "Mauro Cendon Hidalgo"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Bienvenido a mi blog*."
+  bio: "Argentino/Español. Ing. de Software. Hablo de software development, música, economía y comparto temas que me parecen interesantes."
   location: "Madrid, Spain"
   email:
   links:
