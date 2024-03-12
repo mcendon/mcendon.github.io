@@ -12,13 +12,13 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale: "es-ES"
-title: "El blog de Mauro Cendon"
+title: "Maureadas"
 title_separator: "-"
-subtitle: "Mi espacio personal" # site tagline that appears below site title in masthead
+subtitle: "Blog" # site tagline that appears below site title in masthead
 name: "Mauro Cendon Hidalgo"
 description: "Blog"
 url: "https://mcendon.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -32,7 +32,7 @@ words_per_minute: 200
 comments:
   provider: "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname: "el-blog-de-mauro" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname: "maureadas-blog" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -95,7 +95,7 @@ analytics:
 author:
   name: "Mauro Cendon Hidalgo"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Soy una persona **increíble**."
+  bio: "Bienvenido a mi blog*."
   location: "Madrid, Spain"
   email:
   links:
