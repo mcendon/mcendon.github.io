@@ -1,5 +1,5 @@
-import { Component, computed, effect, input, type Signal } from '@angular/core'
-import { HeaderLinkComponent } from './header-link.component'
+import { Component, computed, input } from '@angular/core';
+import { HeaderLinkComponent } from './header-link.component';
 
 @Component({
     imports: [HeaderLinkComponent],
