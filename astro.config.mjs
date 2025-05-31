@@ -1,16 +1,23 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import { defineConfig } from 'astro/config';
 
-import analogjsangular from '@analogjs/astro-angular';
-import tailwindcss from "@tailwindcss/vite";
+import angular from '@analogjs/astro-angular';
+
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://mcendon.github.io',
+  integrations: [mdx(), sitemap(), angular({
     vite: {
-        plugins: [tailwindcss()],
-    },
-    site: 'https://mcendon.github.io',
-    integrations: [mdx(), sitemap(), analogjsangular()],
+      transformFilter: (_code, id) => {
+          return id.includes('src/components/angular'); // <- only transform Angular TypeScript files
+      },
+    }
+  })],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

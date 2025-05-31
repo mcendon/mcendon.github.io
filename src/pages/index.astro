@@ -1,8 +1,11 @@
 ---
+import { HeaderComponent } from '../components/angular/header.component';
+import { FooterComponent } from '../components/angular/footer.component';
+
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+console.log('asdasd', pathname);
 ---
 
 <!doctype html>
@@ -11,7 +14,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
+		<HeaderComponent title={SITE_TITLE} pathname={pathname}></HeaderComponent>
 		<main>
 			<h1>🧑‍🚀 Hello, Astronaut!</h1>
 			<p>
@@ -44,6 +47,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
 			</p>
 		</main>
-		<Footer />
+		<FooterComponent></FooterComponent>
 	</body>
 </html>

@@ -1,13 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import { FooterComponent } from '../components/angular/footer.component';
 import FormattedDate from '../components/FormattedDate.astro';
+import { HeaderComponent } from '../components/angular/header.component';
 
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
 ---
 
 <html lang="en">
@@ -55,7 +56,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</head>
 
 	<body>
-		<Header />
+		<HeaderComponent title={title} pathname={pathname}></HeaderComponent>
 		<main>
 			<article>
 				<div class="hero-image">
@@ -80,6 +81,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				</div>
 			</article>
 		</main>
-		<Footer />
+		<FooterComponent></FooterComponent>
 	</body>
 </html>
