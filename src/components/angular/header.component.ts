@@ -7,9 +7,12 @@ import { HeaderLinkComponent } from './header-link.component';
     template: `
         <header>
             <nav>
-                <h2>
-                    <a href="/">{{ title() }}</a>
-                </h2>
+                <div class="title">
+                    <img class="avatar" src="https://avatars.githubusercontent.com/u/7624862?s=75&u=995703f01095ff2da08acc11c5f4b80e2c6fc78a&v=4" />
+                    <h2>
+                        <a href="/">{{ title() }}</a>
+                    </h2>
+                </div>
                 <div class="internal-links">
 					<app-header-link href="/" [active]="menupath() === '/' || !menupath()">Home</app-header-link>
 					<app-header-link href="/blog" [active]="menupath() === 'blog'">Blog</app-header-link>
@@ -105,6 +108,17 @@ import { HeaderLinkComponent } from './header-link.component';
 			display: none;
 		}
 	}
+    .avatar {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
     `,
 })
 export class HeaderComponent {
