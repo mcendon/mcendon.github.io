@@ -1,4 +1,4 @@
-import { Component, computed, effect, input } from '@angular/core'
+import { Component, computed, effect, input, type Signal } from '@angular/core'
 import { HeaderLinkComponent } from './header-link.component'
 
 @Component({
@@ -11,9 +11,9 @@ import { HeaderLinkComponent } from './header-link.component'
                     <a href="/">{{ title() }}</a>
                 </h2>
                 <div class="internal-links">
-					<app-header-link href="/" [active]="pathname() === '/' || !pathname()">Home</app-header-link>
-					<app-header-link href="/blog" [active]="pathname() === 'blog'">Blog</app-header-link>
-					<app-header-link href="/about" [active]="pathname() === 'about'">About</app-header-link>
+					<app-header-link href="/" [active]="menupath() === '/' || !menupath()">Home</app-header-link>
+					<app-header-link href="/blog" [active]="menupath() === 'blog'">Blog</app-header-link>
+					<app-header-link href="/about" [active]="menupath() === 'about'">About</app-header-link>
                 </div>
                 <div class="social-links">
                     <a href="https://m.webtoo.ls/@astro" target="_blank">
@@ -110,4 +110,9 @@ import { HeaderLinkComponent } from './header-link.component'
 export class HeaderComponent {
     title = input<string>();
 	pathname = input<string>();
+	subpath = computed(() => {
+		const subpath = this.pathname()?.match(/[^\/]+/g);
+		return subpath ? subpath : [];
+	});
+	menupath = computed(() => this.subpath()[0]);
 }
