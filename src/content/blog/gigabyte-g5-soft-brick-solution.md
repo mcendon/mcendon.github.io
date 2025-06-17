@@ -5,6 +5,9 @@ pubDate: 'Jun 17 2025'
 heroImage: '/hero_gigabyte.png'
 ---
 
+## _UPDATE: At the moment I wrote this post, Gigabyte published an oficial patch to flash the BIOS. Please follow the [official guide PDF](/gigabyte/BIOS_update_operation_instructions.pdf). Anyway if it doens't work for you, you can try this optional solution in this post._
+
+
 After a June 11 Windows 11 update, my GIGABYTE G5 MF laptop suddenly wouldn’t boot. Cannot boot from USB drives also, seems BIOS was damaged.
 (Check this [Reddit Post](https://www.reddit.com/r/gigabyte/comments/1ladf27/gigabyte_g5_kf5_stuck_on_startup_screen/)).
 Fortunately, it was a **soft brick**, and after some deep digging and trial-and-error, I recovered it **completely using only the official BIOS, EFI Shell, and a USB drive.**
