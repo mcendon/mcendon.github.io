@@ -1,6 +1,6 @@
 ---
-title: 'How to Gigabyte G5 MF Soft Brick Solution'
-description: 'Solution to the soft brick caused by Windows 11 Update that damages the BIOS.'
+title: 'How to Gigabyte G5 MF Soft Brick Solution (Unofficial)'
+description: 'Unofficial solution to the soft brick caused by Windows 11 Update that damages the BIOS of Gigabyte G5 MF laptop.'
 pubDate: 'Jun 17 2025'
 heroImage: '/hero_gigabyte.png'
 ---
