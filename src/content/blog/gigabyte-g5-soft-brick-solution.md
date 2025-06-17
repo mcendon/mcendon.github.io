@@ -102,8 +102,6 @@ The script will:
 - Detect the .10 BIOS file
 - Flash it using Intel FPT
 
-Then call NP50RNx-Y10.efi for any additional OEM routines
-
 ⚠️ _Do not interrupt. It will execute some processes, then restart one time, then flash the bios. When it says completed, it will power off automatically._
 
 Screenshots of my process:
