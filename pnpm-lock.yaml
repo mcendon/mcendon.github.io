@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@analogjs/astro-angular':
-        specifier: ^1.17.1
+        specifier: ^1.18.0
         version: 1.18.0(4f3bd16a66cd3fa0c940e66bb7561646)
       '@angular-devkit/build-angular':
         specifier: ^20.0.0
