@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@analogjs/astro-angular':
-        specifier: ^1.17.1
-        version: 1.18.0(4f3bd16a66cd3fa0c940e66bb7561646)
+        specifier: ^1.19.1
+        version: 1.19.1(tdem6rdzipdqujk4qpu3yee3xq)
       '@angular-devkit/build-angular':
         specifier: ^20.0.0
-        version: 20.0.3(ce15c16625bc3fdf75c402da135c8378)
+        version: 20.0.3(tuteq4kyvsch53loa2ot5rqzkm)
       '@angular/animations':
         specifier: ^20.0.0
         version: 20.0.4(@angular/common@20.0.4(@angular/core@20.0.4(@angular/compiler@20.0.4)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.0.4(@angular/compiler@20.0.4)(rxjs@7.8.2)(zone.js@0.15.1))
@@ -78,8 +78,8 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@analogjs/astro-angular@1.18.0':
-    resolution: {integrity: sha512-fI0CZkMAd8rSfmvw9HlIi0Mpe9UsGvscJDYuNO7Y7Z/T2MQI5EQhSRHmsLQOnJu6HIV13lkmwMwCJsNI1RVvgQ==}
+  '@analogjs/astro-angular@1.19.1':
+    resolution: {integrity: sha512-v5l1GfXDc9zbi8WcSuczgYqLRAyTQbmjW49GlaD5aLGmQGEkMofhI4/OHX6kPE0ivbnR6Iz3XXi7egy/MOBYlg==}
     peerDependencies:
       '@angular-devkit/build-angular': '>=16.0.0'
       '@angular/animations': '>=16.0.0'
@@ -95,8 +95,8 @@ packages:
       tslib: ^2.4.0
       zone.js: '>=0.13.3'
 
-  '@analogjs/vite-plugin-angular@1.18.0':
-    resolution: {integrity: sha512-d3uk/bC/ykoAWl3XMX2ZwowIyBR+uk1ua5//bzgf9oPWJcJ/8LG9YnsbLq7CKRvi/WNYCGOdFXXZOdIrwUYpeQ==}
+  '@analogjs/vite-plugin-angular@1.19.1':
+    resolution: {integrity: sha512-bl38MZtcP4xuT5+HgdL3H4zNMXlUjLSkk8zONw7bccNozWWxHKzI5u81AacFYjB7SYXR6Z3cWDYMEtVXZO5f2A==}
     peerDependencies:
       '@angular-devkit/build-angular': ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0
       '@angular/build': ^18.0.0 || ^19.0.0 || ^20.0.0
@@ -4747,10 +4747,10 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@analogjs/astro-angular@1.18.0(4f3bd16a66cd3fa0c940e66bb7561646)':
+  '@analogjs/astro-angular@1.19.1(tdem6rdzipdqujk4qpu3yee3xq)':
     dependencies:
-      '@analogjs/vite-plugin-angular': 1.18.0(@angular-devkit/build-angular@20.0.3(ce15c16625bc3fdf75c402da135c8378))(@angular/build@20.0.3(9bb37c5c3d77989631468875c8f9d90d))
-      '@angular-devkit/build-angular': 20.0.3(ce15c16625bc3fdf75c402da135c8378)
+      '@analogjs/vite-plugin-angular': 1.19.1(@angular-devkit/build-angular@20.0.3(tuteq4kyvsch53loa2ot5rqzkm))(@angular/build@20.0.3(aputw35g4waj5qkfh6aeukgogy))
+      '@angular-devkit/build-angular': 20.0.3(tuteq4kyvsch53loa2ot5rqzkm)
       '@angular/animations': 20.0.4(@angular/common@20.0.4(@angular/core@20.0.4(@angular/compiler@20.0.4)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.0.4(@angular/compiler@20.0.4)(rxjs@7.8.2)(zone.js@0.15.1))
       '@angular/common': 20.0.4(@angular/core@20.0.4(@angular/compiler@20.0.4)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/compiler': 20.0.4
@@ -4766,13 +4766,13 @@ snapshots:
     transitivePeerDependencies:
       - '@angular/build'
 
-  '@analogjs/vite-plugin-angular@1.18.0(@angular-devkit/build-angular@20.0.3(ce15c16625bc3fdf75c402da135c8378))(@angular/build@20.0.3(9bb37c5c3d77989631468875c8f9d90d))':
+  '@analogjs/vite-plugin-angular@1.19.1(@angular-devkit/build-angular@20.0.3(tuteq4kyvsch53loa2ot5rqzkm))(@angular/build@20.0.3(aputw35g4waj5qkfh6aeukgogy))':
     dependencies:
       ts-morph: 21.0.1
       vfile: 6.0.3
     optionalDependencies:
-      '@angular-devkit/build-angular': 20.0.3(ce15c16625bc3fdf75c402da135c8378)
-      '@angular/build': 20.0.3(9bb37c5c3d77989631468875c8f9d90d)
+      '@angular-devkit/build-angular': 20.0.3(tuteq4kyvsch53loa2ot5rqzkm)
+      '@angular/build': 20.0.3(aputw35g4waj5qkfh6aeukgogy)
 
   '@angular-devkit/architect@0.2000.3(chokidar@4.0.3)':
     dependencies:
@@ -4781,13 +4781,13 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular-devkit/build-angular@20.0.3(ce15c16625bc3fdf75c402da135c8378)':
+  '@angular-devkit/build-angular@20.0.3(tuteq4kyvsch53loa2ot5rqzkm)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2000.3(chokidar@4.0.3)
       '@angular-devkit/build-webpack': 0.2000.3(chokidar@4.0.3)(webpack-dev-server@5.2.1(webpack@5.99.8(esbuild@0.25.5)))(webpack@5.99.8(esbuild@0.25.5))
       '@angular-devkit/core': 20.0.3(chokidar@4.0.3)
-      '@angular/build': 20.0.3(9bb37c5c3d77989631468875c8f9d90d)
+      '@angular/build': 20.0.3(aputw35g4waj5qkfh6aeukgogy)
       '@angular/compiler-cli': 20.0.4(@angular/compiler@20.0.4)(typescript@5.8.3)
       '@babel/core': 7.27.1
       '@babel/generator': 7.27.1
@@ -4896,7 +4896,7 @@ snapshots:
       '@angular/core': 20.0.4(@angular/compiler@20.0.4)(rxjs@7.8.2)(zone.js@0.15.1)
       tslib: 2.8.1
 
-  '@angular/build@20.0.3(9bb37c5c3d77989631468875c8f9d90d)':
+  '@angular/build@20.0.3(aputw35g4waj5qkfh6aeukgogy)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2000.3(chokidar@4.0.3)
