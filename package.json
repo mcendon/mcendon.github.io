@@ -20,7 +20,7 @@
     "@angular/platform-browser": "^20.0.0",
     "@angular/platform-browser-dynamic": "^20.0.0",
     "@angular/platform-server": "^20.0.0",
-    "@astrojs/mdx": "^4.3.4",
+    "@astrojs/mdx": "^4.3.6",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.4.0",
     "@fontsource-variable/onest": "^5.2.8",
