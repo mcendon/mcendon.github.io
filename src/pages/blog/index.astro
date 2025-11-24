@@ -6,7 +6,6 @@ import { FooterComponent } from '../../components/angular/footer.component';
 import FormattedDate from '../../components/FormattedDate.astro';
 import { HeaderComponent } from '../../components/angular/header.component';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
-import Giscus from '../../components/Giscus.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
