@@ -1,51 +1,540 @@
 ---
-import { HeaderComponent } from '../components/angular/header.component';
-import { FooterComponent } from '../components/angular/footer.component';
-
-import BaseHead from '../components/BaseHead.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+import { SITE_TITLE } from '@/consts';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import GitHubRepos from '@/components/GitHubRepos.astro';
+import {
+	Computer,
+	Github,
+	Globe,
+	Linkedin,
+	Rocket,
+	Target,
+	Code,
+	Zap,
+	Wrench,
+	Wallet,
+	Users,
+	Brackets,
+} from 'lucide-astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<HeaderComponent title={SITE_TITLE} pathname={pathname}></HeaderComponent>
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<FooterComponent></FooterComponent>
-	</body>
-</html>
+<BaseLayout
+	baseTitle={SITE_TITLE}
+	title="Home"
+	description="Full Stack Developer with 14+ years of experience"
+>
+	<main class="home-container">
+		<!-- Hero Section -->
+		<section class="bento-grid">
+			<!-- Main Profile Card -->
+			<div class="bento-item hero-card">
+				<div class="hero-content">
+					<!-- <div class="hero-badge">
+						<span class="badge-dot"></span>
+						Available for opportunities
+					</div> -->
+					<h1 class="hero-title">
+						<span class="gradient-text">Mauro Cendón Hidalgo</span>
+					</h1>
+					<p class="hero-subtitle"><Computer size="24" class="inline" /> Software Engineer</p>
+					<p class="hero-bio">
+						With over <strong>14 years of experience</strong> in software development, I have honed my
+						ability to understand complex problems and provide effective solutions. My focus is on creating
+						high-quality, profitable applications that drive business growth and profitability.
+					</p>
+
+					<!-- Social Links -->
+					<div class="social-links">
+						<a
+							href="https://www.linkedin.com/in/maurocendonhidalgo/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="social-link linkedin"
+						>
+							<Linkedin size="24" class="inline" />
+							LinkedIn
+						</a>
+						<a
+							href="https://github.com/mcendon"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="social-link github"
+						>
+							<Github size="24" class="inline" />
+							GitHub
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Skills Card -->
+			<div class="bento-item skills-card">
+				<div class="card-header">
+					<h2><Rocket size="32" class="inline" /> Key Skills</h2>
+				</div>
+				<ul class="skills-list">
+					<li class="skill-item">
+						<span class="skill-icon"><Zap size="24" class="inline" /></span>
+						<span>Full Stack development with an emphasis on efficiency and usability</span>
+					</li>
+					<li class="skill-item">
+						<span class="skill-icon"><Wrench size="24" class="inline" /></span>
+						<span>AI, development testing, automation and blockchain integrations</span>
+					</li>
+					<li class="skill-item">
+						<span class="skill-icon"><Wallet size="24" class="inline" /></span>
+						<span>Strong orientation towards generating high quality applications</span>
+					</li>
+					<li class="skill-item">
+						<span class="skill-icon"><Users size="24" class="inline" /></span>
+						<span>Teamwork and leadership to foster collective growth</span>
+					</li>
+					<li class="skill-item">
+						<span class="skill-icon"><Brackets size="24" class="inline" /></span>
+						<span
+							>Vast experience in leading industries technologies and frameworks: Angular, Vue,
+							React, PHP, NodeJS, Java, Python and more</span
+						>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Objectives Card -->
+			<div class="bento-item objectives-card">
+				<div class="card-header">
+					<h2><Target size="32" class="inline" /> Objectives</h2>
+				</div>
+				<p class="objectives-text">
+					To expand my knowledge areas, generate visible and lasting results, adapt to change with
+					ease, motivate teams, and promote effective communication. My goal is to collaborate with
+					excellent teams and contribute to the growth of the business.
+				</p>
+			</div>
+
+			<!-- Motivation Card -->
+			<div class="bento-item motivation-card">
+				<div class="card-header">
+					<h2><Globe size="32" class="inline" /> Motivation</h2>
+				</div>
+				<p class="motivation-text">
+					My primary motivation is to leverage my experience and skills to drive the success and
+					profitability of the companies I collaborate with, creating practical solutions that
+					generate a tangible impact.
+				</p>
+			</div>
+
+			<!-- GitHub Repositories Card -->
+			<div class="bento-item repos-card">
+				<div class="card-header">
+					<h2><Code size="32" class="inline" /> Recent Projects</h2>
+					<a
+						href="https://github.com/mcendon?tab=repositories"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="view-all-link"
+					>
+						View all →
+					</a>
+				</div>
+				<GitHubRepos />
+			</div>
+		</section>
+	</main>
+</BaseLayout>
+
+<style>
+	.home-container {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	.bento-grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 1.5rem;
+		grid-auto-rows: minmax(100px, auto);
+	}
+
+	.bento-item {
+		background: var(--card);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-xl);
+		padding: 2rem;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.bento-item::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+		opacity: 0;
+		transition: opacity 0.4s ease;
+		z-index: 0;
+	}
+
+	.bento-item:hover::before {
+		opacity: 0.03;
+	}
+
+	.bento-item:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+		border-color: var(--primary-accent);
+	}
+
+	.bento-item > * {
+		position: relative;
+		z-index: 1;
+	}
+
+	/* Hero Card */
+	.hero-card {
+		grid-column: span 12;
+		background: linear-gradient(135deg, var(--card) 0%, var(--muted) 100%);
+		border: 2px solid var(--border);
+	}
+
+	.hero-content {
+		max-width: 900px;
+	}
+
+	.hero-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1rem;
+		background: var(--success);
+		color: var(--success-foreground);
+		border-radius: var(--radius-lg);
+		font-size: 0.875rem;
+		font-weight: 500;
+		margin-bottom: 1.5rem;
+		animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.8;
+		}
+	}
+
+	.badge-dot {
+		width: 8px;
+		height: 8px;
+		background: var(--success-foreground);
+		border-radius: 50%;
+		animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+	}
+
+	@keyframes ping {
+		75%,
+		100% {
+			transform: scale(1.5);
+			opacity: 0;
+		}
+	}
+
+	.hero-title {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 800;
+		margin: 0 0 1rem 0;
+		line-height: 1.1;
+	}
+
+	.gradient-text {
+		background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.hero-subtitle {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--foreground);
+		margin: 0 0 0.5rem 0;
+	}
+
+	.hero-description {
+		font-size: 1.125rem;
+		color: var(--muted-foreground);
+		margin: 0 0 1.5rem 0;
+	}
+
+	.hero-bio {
+		font-size: 1.125rem;
+		line-height: 1.7;
+		color: var(--foreground);
+		margin: 0 0 2rem 0;
+	}
+
+	.social-links {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.social-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.75rem 1.5rem;
+		background: var(--background);
+		color: var(--foreground);
+		border: 2px solid var(--border);
+		border-radius: var(--radius-lg);
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.social-link::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		z-index: 0;
+	}
+
+	.social-link:hover::before {
+		opacity: 0.1;
+	}
+
+	.social-link:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+		border-color: var(--primary-accent);
+	}
+
+	.social-link svg,
+	.social-link span {
+		position: relative;
+		z-index: 1;
+	}
+
+	.linkedin:hover {
+		border-color: #0077b5;
+	}
+
+	.github:hover {
+		border-color: #333;
+	}
+
+	/* Skills Card */
+	.skills-card {
+		grid-column: span 12;
+		background: linear-gradient(135deg, var(--card) 0%, var(--accent) 100%);
+	}
+
+	.card-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1.5rem;
+	}
+
+	.card-header h2 {
+		font-size: 1.75rem;
+		font-weight: 700;
+		margin: 0;
+		color: var(--foreground);
+	}
+
+	.view-all-link {
+		color: var(--primary-accent);
+		text-decoration: none;
+		font-weight: 600;
+		transition: transform 0.2s ease;
+		display: inline-block;
+	}
+
+	.view-all-link:hover {
+		transform: translateX(4px);
+	}
+
+	.skills-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 1rem;
+	}
+
+	.skill-item {
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+		padding: 1rem;
+		background: var(--background);
+		border-radius: var(--radius-lg);
+		transition: all 0.3s ease;
+		border: 1px solid transparent;
+	}
+
+	.skill-item:hover {
+		background: var(--muted);
+		border-color: var(--border);
+		transform: translateX(8px);
+	}
+
+	.skill-icon {
+		font-size: 1.5rem;
+		flex-shrink: 0;
+	}
+
+	.skill-item span:last-child {
+		line-height: 1.6;
+		color: var(--foreground);
+	}
+
+	/* Objectives Card */
+	.objectives-card {
+		grid-column: span 12;
+		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-accent) 100%);
+		color: var(--primary-foreground);
+	}
+
+	.objectives-card .card-header h2 {
+		color: var(--primary-foreground);
+	}
+
+	.objectives-text {
+		font-size: 1.125rem;
+		line-height: 1.7;
+		margin: 0;
+		color: var(--primary-foreground);
+	}
+
+	/* Motivation Card */
+	.motivation-card {
+		grid-column: span 12;
+		background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-accent) 100%);
+		color: var(--secondary-foreground);
+	}
+
+	.motivation-card .card-header h2 {
+		color: var(--secondary-foreground);
+	}
+
+	.motivation-text {
+		font-size: 1.125rem;
+		line-height: 1.7;
+		margin: 0;
+		color: var(--secondary-foreground);
+	}
+
+	/* GitHub Repositories Card */
+	.repos-card {
+		grid-column: span 12;
+		min-height: 400px;
+	}
+
+	/* Tablet Layout */
+	@media (min-width: 768px) {
+		.hero-card {
+			grid-column: span 12;
+		}
+
+		.skills-card {
+			grid-column: span 6;
+		}
+
+		.objectives-card {
+			grid-column: span 6;
+		}
+
+		.motivation-card {
+			grid-column: span 12;
+		}
+
+		.repos-card {
+			grid-column: span 12;
+		}
+	}
+
+	/* Desktop Layout */
+	@media (min-width: 1024px) {
+		.hero-card {
+			grid-column: span 8;
+		}
+
+		.skills-card {
+			grid-column: span 4;
+			grid-row: span 2;
+		}
+
+		.objectives-card {
+			grid-column: span 4;
+		}
+
+		.motivation-card {
+			grid-column: span 4;
+		}
+
+		.repos-card {
+			grid-column: span 12;
+		}
+	}
+
+	/* Mobile Responsiveness */
+	@media (max-width: 767px) {
+		.home-container {
+			padding: 1rem;
+		}
+
+		.bento-grid {
+			gap: 1rem;
+		}
+
+		.bento-item {
+			padding: 1.5rem;
+		}
+
+		.hero-title {
+			font-size: 2rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.25rem;
+		}
+
+		.hero-bio {
+			font-size: 1rem;
+		}
+
+		.social-links {
+			flex-direction: column;
+		}
+
+		.social-link {
+			width: 100%;
+			justify-content: center;
+		}
+
+		.skills-list {
+			gap: 0.75rem;
+		}
+
+		.skill-item {
+			padding: 0.75rem;
+		}
+	}
+</style>

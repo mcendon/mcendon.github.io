@@ -1,16 +1,36 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BlogPost from '@/layouts/BlogPost.astro';
 import { SITE_TITLE } from '../consts';
+import HeroImage from '../assets/images/about/mauro-snow.jpg?url';
 ---
 
-<Layout
+<BlogPost
 	title={SITE_TITLE}
 	baseTitle={`About | ${SITE_TITLE}`}
-	description="Lorem ipsum dolor sit amet"
+	description="About me"
 	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
+	heroImage={HeroImage}
 >
+	<h2>Hi, I'm Mauro</h2>
 	<p>
-		Hi! I’m Mauro, a Full Stack Developer based in Madrid with over 14 years of professional experience, and a strong frontend focus. I’m passionate about building scalable, high-performance web and mobile applications that make a real impact. Throughout my career, I’ve led cross-functional teams across Spain and India, architected cloud-based solutions, and driven digital transformations in sectors like finance and e-commerce. Whether migrating legacy systems or crafting intuitive user interfaces, I bring a hands-on, quality-first approach from architecture to deployment. My toolkit includes Angular, Spring Boot, Node.js, and GCP—and I’m always eager to adopt emerging technologies. Problem-solving is my playground, and teamwork is my secret weapon.
+		I'm a seasoned software engineer with a passion for creating innovative and user-friendly
+		applications.
 	</p>
-</Layout>
+	<p>
+		During my career, I've had the privilege of working with some of the most talented individuals
+		in the industry, and I'm always eager to learn new things and take on new challenges.
+	</p>
+	<p>
+		When I'm not coding, you can find me playing the guitar, creating music, fishing, or exploring
+		new places with my girlfriend and friends.
+	</p>
+</BlogPost>
+
+<style>
+	.prose {
+		max-width: 100%;
+	}
+	p {
+		margin-bottom: 0.5rem;
+	}
+</style>

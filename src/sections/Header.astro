@@ -1,0 +1,39 @@
+---
+import ModeToggle from '@/components/ModeToggle.astro';
+import Button from '@/components/starwind/button';
+import { Avatar, AvatarImage } from '@components/starwind/avatar';
+import { SITE_TITLE } from '@/consts';
+---
+
+<header class="flex flex-col md:flex-row justify-between w-full p-4">
+	<div class="flex items-center gap-2">
+		<Avatar size="lg">
+			<AvatarImage
+				src="https://avatars.githubusercontent.com/u/7624862?s=75&u=995703f01095ff2da08acc11c5f4b80e2c6fc78a&v=4"
+				alt={SITE_TITLE}
+			/>
+		</Avatar>
+		<span>{SITE_TITLE}</span>
+	</div>
+	<section class="flex items-center justify-center gap-4">
+		<a href="/" aria-label="Home" class={Astro.url.pathname === '/' ? 'active' : ''}>
+			<Button variant="ghost" size="icon">Home</Button></a
+		>
+		<a href="/blog/" aria-label="Blog" class={Astro.url.pathname.includes('/blog/') ? 'active' : ''}
+			><Button variant="ghost" size="icon">Blog</Button></a
+		>
+		<a
+			href="/about/"
+			aria-label="About"
+			class={Astro.url.pathname.includes('/about') ? 'active' : ''}
+			><Button variant="ghost" size="icon">About</Button></a
+		>
+		<ModeToggle />
+	</section>
+</header>
+
+<style>
+	header {
+		border-bottom: 1px solid var(--border);
+	}
+</style>

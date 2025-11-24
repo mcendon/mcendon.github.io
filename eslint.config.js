@@ -51,6 +51,7 @@ export default [
       '.astro/',
       '*.config.{js,mjs,cjs}',
       'public/',
+      'src/components/starwind/',
     ],
   },
 ];

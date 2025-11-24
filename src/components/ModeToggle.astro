@@ -1,0 +1,36 @@
+---
+import {
+	Dropdown,
+	DropdownContent,
+	DropdownItem,
+	DropdownTrigger,
+} from '@components/starwind/dropdown';
+import Button from '@components/starwind/button';
+import { Moon, Sun } from 'lucide-astro';
+---
+
+<Dropdown>
+	<DropdownTrigger asChild>
+		<Button variant="ghost" size="icon">
+			<Sun
+				class="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"
+			/>
+			<Moon
+				class="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"
+			/>
+			<span class="sr-only">Toggle theme</span>
+		</Button>
+	</DropdownTrigger>
+	<DropdownContent align="end">
+		<DropdownItem class="modeLight"> Light </DropdownItem>
+		<DropdownItem class="modeDark"> Dark </DropdownItem>
+	</DropdownContent>
+</Dropdown>
+
+<script>
+	const modeLight = document.querySelector('.modeLight');
+	const modeDark = document.querySelector('.modeDark');
+
+	modeLight?.addEventListener('click', () => document.documentElement.classList.remove('dark'));
+	modeDark?.addEventListener('click', () => document.documentElement.classList.add('dark'));
+</script>
