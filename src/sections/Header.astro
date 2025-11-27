@@ -5,8 +5,10 @@ import { Avatar, AvatarImage } from '@components/starwind/avatar';
 import { SITE_TITLE } from '@/consts';
 ---
 
-<header class="flex flex-col md:flex-row justify-between w-full p-4">
-	<div class="flex items-center gap-2">
+<header
+	class="flex flex-col md:flex-row justify-between w-full p-4 bg-background sticky top-0 z-10"
+>
+	<div class="flex items-center gap-2 self-center md:self-start">
 		<Avatar size="lg">
 			<AvatarImage
 				src="https://avatars.githubusercontent.com/u/7624862?s=75&u=995703f01095ff2da08acc11c5f4b80e2c6fc78a&v=4"
