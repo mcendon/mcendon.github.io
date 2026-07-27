@@ -1,14 +1,23 @@
 ---
+// Direction contract (per impeccable new-work § 5)
+// THESIS: A 60/40 hero break, text + the approved portrait, says "senior-recruiter-ready" in one viewport before the bento evidence grid.
+// OWN-WORLD: Trust-Green & Client-Safe Blue (light), Authorize-Blue & Capability-Fuchsia (dark), Karla-only typography, lift-on-cue (bento hover -4px / 0 20px 40px / 0.03 primary->secondary gradient wash).
+// STORY: A recruiter lands at /, sees name + role + portrait at first viewport, then reads senior full-stack generalist + AI/automation/blockchain integration depth and recent shipping activity via the GitHub Repos card.
+// FIRST VIEWPORT: Hero card (bento span 8 at lg) -> 60/40 inner split (h1 gradient + subtitle + bio + LinkedIn/GitHub socials | approved portrait framed in 12px radius inside the hero's 2px border).
+// FORM: Operate dashboard at /, extending the incumbent bento grid. The only structural change is the hero card's inner 60/40 split and the approved portrait's first appearance on the homepage. Existing copy stays authoritative.
+
 import { SITE_TITLE } from '@/consts';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import GitHubRepos from '@/components/GitHubRepos.astro';
+import HeroImage from '@/assets/images/about/mauro_profile.jpg';
+
 import {
 	Computer,
 	Github,
-	Globe,
 	Linkedin,
 	Rocket,
 	Target,
+	Globe,
 	Code,
 	Zap,
 	Wrench,
@@ -16,6 +25,7 @@ import {
 	Users,
 	Brackets,
 } from 'lucide-astro';
+import { Image } from 'astro:assets';
 ---
 
 <BaseLayout
@@ -24,45 +34,58 @@ import {
 	description="Full Stack Developer with 14+ years of experience"
 >
 	<main class="home-container">
-		<!-- Hero Section -->
+		<!-- Bento Section -->
 		<section class="bento-grid">
 			<!-- Main Profile Card -->
 			<div class="bento-item hero-card">
-				<div class="hero-content">
-					<!-- <div class="hero-badge">
-						<span class="badge-dot"></span>
-						Available for opportunities
-					</div> -->
-					<h1 class="hero-title">
-						<span class="gradient-text">Mauro Cendón Hidalgo</span>
-					</h1>
-					<p class="hero-subtitle"><Computer size="24" class="inline" /> Software Engineer</p>
-					<p class="hero-bio">
-						With over <strong>14 years of experience</strong> in software development, I have honed my
-						ability to understand complex problems and provide effective solutions. My focus is on creating
-						high-quality, profitable applications that drive business growth and profitability.
-					</p>
-
-					<!-- Social Links -->
-					<div class="social-links">
-						<a
-							href="https://www.linkedin.com/in/maurocendonhidalgo/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="social-link linkedin"
-						>
-							<Linkedin size="24" class="inline" />
-							LinkedIn
-						</a>
-						<a
-							href="https://github.com/mcendon"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="social-link github"
-						>
-							<Github size="24" class="inline" />
-							GitHub
-						</a>
+				<div class="hero-grid">
+					<div class="hero-text">
+						<!-- hero-badge area kept quiet per the implementation brief. -->
+						<h1 class="hero-title">
+							<span class="gradient-text">Mauro Cendón Hidalgo</span>
+						</h1>
+						<p class="hero-subtitle"><Computer size="24" class="inline" /> Software Engineer</p>
+						<p class="hero-bio">
+							With over <strong>14 years of experience</strong> in software development, I have honed
+							my ability to understand complex problems and provide effective solutions. My focus is
+							on creating high-quality, profitable applications that drive business growth and profitability.
+						</p>
+						<div class="social-links">
+							<a
+								href="https://www.linkedin.com/in/maurocendonhidalgo/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="social-link"
+								data-brand="linkedin"
+								aria-label="LinkedIn profile"
+							>
+								<Linkedin size="24" class="inline" />
+								<span>LinkedIn</span>
+							</a>
+							<a
+								href="https://github.com/mcendon"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="social-link"
+								data-brand="github"
+								aria-label="GitHub profile"
+							>
+								<Github size="24" class="inline" />
+								<span>GitHub</span>
+							</a>
+						</div>
+					</div>
+					<div class="hero-portrait">
+						<Image
+							src={HeroImage}
+							alt="Mauro Cendón Hidalgo, professional portrait"
+							class="portrait-img"
+							width="1792"
+							height="2090"
+							loading="eager"
+							decoding="async"
+							fetchpriority="high"
+						/>
 					</div>
 				</div>
 			</div>
@@ -193,29 +216,58 @@ import {
 		z-index: 1;
 	}
 
-	/* Hero Card */
+	/* Hero Card: 60/40 inner split (text left, approved portrait right at lg). */
 	.hero-card {
 		grid-column: span 12;
 		background: linear-gradient(135deg, var(--card) 0%, var(--muted) 100%);
 		border: 2px solid var(--border);
+		&:hover {
+			.hero-portrait {
+				filter: grayscale(0);
+			}
+		}
 	}
 
-	.hero-content {
-		max-width: 900px;
-	}
-
-	.hero-badge {
-		display: inline-flex;
+	.hero-grid {
+		display: grid;
+		gap: 1.5rem;
 		align-items: center;
-		gap: 0.5rem;
-		padding: 0.5rem 1rem;
-		background: var(--success);
-		color: var(--success-foreground);
-		border-radius: var(--radius-lg);
-		font-size: 0.875rem;
-		font-weight: 500;
-		margin-bottom: 1.5rem;
-		animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+	}
+
+	.hero-text {
+		min-width: 0;
+	}
+
+	.hero-portrait {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		filter: grayscale(1);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	/* Hero portrait photographs the user uploads are 1792×2090 native (6:7 portrait).
+	   object-position: 50% 30% frames an off-center face in the crop safely across headshots where the subject sits above midframe. */
+	.portrait-img {
+		display: block;
+		width: 100%;
+		max-width: 320px;
+		aspect-ratio: 6 / 7;
+		object-fit: cover;
+		object-position: 50% 30%;
+		border-radius: 0.75rem;
+		border: 1px solid var(--border);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+		transition:
+			transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+			box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+			border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	/* The parent .bento-item:hover already lifts the entire card -4px (Lift-on-Cue Rule).
+	   The portrait sits inside that lift; we keep only the border-color accent so the visual signal travels down without stacking transforms. */
+	.bento-item:hover .portrait-img {
+		border-color: var(--primary-accent);
 	}
 
 	@keyframes pulse {
@@ -228,14 +280,6 @@ import {
 		}
 	}
 
-	.badge-dot {
-		width: 8px;
-		height: 8px;
-		background: var(--success-foreground);
-		border-radius: 50%;
-		animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-	}
-
 	@keyframes ping {
 		75%,
 		100% {
@@ -245,10 +289,11 @@ import {
 	}
 
 	.hero-title {
-		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-size: clamp(2.25rem, 4.5vw, 3.5rem);
 		font-weight: 800;
 		margin: 0 0 1rem 0;
 		line-height: 1.1;
+		letter-spacing: -0.025em;
 	}
 
 	.gradient-text {
@@ -259,23 +304,17 @@ import {
 	}
 
 	.hero-subtitle {
-		font-size: 1.5rem;
+		font-size: 1.375rem;
 		font-weight: 600;
 		color: var(--foreground);
-		margin: 0 0 0.5rem 0;
-	}
-
-	.hero-description {
-		font-size: 1.125rem;
-		color: var(--muted-foreground);
-		margin: 0 0 1.5rem 0;
+		margin: 0 0 0.75rem 0;
 	}
 
 	.hero-bio {
-		font-size: 1.125rem;
+		font-size: 1.0625rem;
 		line-height: 1.7;
 		color: var(--foreground);
-		margin: 0 0 2rem 0;
+		margin: 0 0 1.75rem 0;
 	}
 
 	.social-links {
@@ -329,12 +368,13 @@ import {
 		z-index: 1;
 	}
 
-	.linkedin:hover {
-		border-color: #0077b5;
+	/* Per-brand hover border accents — explicit exceptions to the two-tone rule; values tracked in DESIGN.md frontmatter (colors.link-accent-linkedin, colors.link-accent-github). */
+	.social-link[data-brand='linkedin']:hover {
+		border-color: var(--link-accent-linkedin, #0077b5);
 	}
 
-	.github:hover {
-		border-color: #333;
+	.social-link[data-brand='github']:hover {
+		border-color: var(--link-accent-github, #333333);
 	}
 
 	/* Skills Card */
@@ -446,92 +486,90 @@ import {
 		min-height: 400px;
 	}
 
-	/* Tablet Layout */
+	/* Tablet Layout (768 → 1023px) */
 	@media (min-width: 768px) {
-		.hero-card {
-			grid-column: span 12;
+		.hero-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
 		}
-
+		.portrait-img {
+			max-width: 280px;
+		}
 		.skills-card {
 			grid-column: span 6;
 		}
-
 		.objectives-card {
 			grid-column: span 6;
 		}
-
 		.motivation-card {
 			grid-column: span 12;
 		}
-
 		.repos-card {
 			grid-column: span 12;
 		}
 	}
 
-	/* Desktop Layout */
+	/* Desktop Layout (≥1024px) */
 	@media (min-width: 1024px) {
+		.hero-grid {
+			grid-template-columns: 60fr 40fr;
+			gap: 2.5rem;
+		}
 		.hero-card {
 			grid-column: span 8;
 		}
-
 		.skills-card {
 			grid-column: span 4;
 			grid-row: span 2;
 		}
-
 		.objectives-card {
 			grid-column: span 4;
 		}
-
 		.motivation-card {
 			grid-column: span 4;
 		}
-
 		.repos-card {
 			grid-column: span 12;
 		}
 	}
 
-	/* Mobile Responsiveness */
+	/* Mobile (<768px) */
 	@media (max-width: 767px) {
 		.home-container {
 			padding: 1rem;
 		}
-
 		.bento-grid {
 			gap: 1rem;
 		}
-
 		.bento-item {
 			padding: 1.5rem;
 		}
-
+		.hero-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+		.portrait-img {
+			max-width: 240px;
+		}
 		.hero-title {
 			font-size: 2rem;
 		}
-
 		.hero-subtitle {
 			font-size: 1.25rem;
 		}
-
 		.hero-bio {
 			font-size: 1rem;
 		}
-
 		.social-links {
 			flex-direction: column;
 		}
-
 		.social-link {
 			width: 100%;
 			justify-content: center;
 		}
-
 		.skills-list {
 			gap: 0.75rem;
 		}
-
 		.skill-item {
 			padding: 0.75rem;
 		}

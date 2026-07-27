@@ -1,0 +1,360 @@
+{
+	"schemaVersion": 2,
+	"generatedAt": "2026-07-27T00:00:00Z",
+	"title": "Design System: Mauro Cendón Hidalgo — Personal Site",
+	"extensions": {
+		"colorMeta": {
+			"primary": {
+				"role": "primary",
+				"displayName": "Trust-Green",
+				"canonical": "#15803d",
+				"tonalRamp": [
+					"oklch(0.18 0.05 144)",
+					"oklch(0.30 0.10 144)",
+					"oklch(0.42 0.132 144)",
+					"oklch(0.516 0.152 144)",
+					"oklch(0.62 0.140 144)",
+					"oklch(0.74 0.110 144)",
+					"oklch(0.88 0.07 144)",
+					"oklch(0.96 0.03 144)"
+				]
+			},
+			"secondary": {
+				"role": "secondary",
+				"displayName": "Client-Safe Blue",
+				"canonical": "#1d4ed8",
+				"tonalRamp": [
+					"oklch(0.18 0.08 264)",
+					"oklch(0.30 0.16 264)",
+					"oklch(0.40 0.20 264)",
+					"oklch(0.488 0.243 264)",
+					"oklch(0.60 0.21 264)",
+					"oklch(0.74 0.16 264)",
+					"oklch(0.86 0.10 264)",
+					"oklch(0.95 0.04 264)"
+				]
+			},
+			"primary-dark": {
+				"role": "primary",
+				"displayName": "Authorize-Blue",
+				"canonical": "#1d4ed8",
+				"tonalRamp": [
+					"oklch(0.18 0.08 264)",
+					"oklch(0.30 0.16 264)",
+					"oklch(0.40 0.20 264)",
+					"oklch(0.488 0.243 264)",
+					"oklch(0.60 0.21 264)",
+					"oklch(0.74 0.16 264)",
+					"oklch(0.86 0.10 264)",
+					"oklch(0.95 0.04 264)"
+				]
+			},
+			"secondary-dark": {
+				"role": "secondary",
+				"displayName": "Capability-Fuchsia",
+				"canonical": "#a21caf",
+				"tonalRamp": [
+					"oklch(0.18 0.08 328)",
+					"oklch(0.30 0.16 328)",
+					"oklch(0.42 0.21 328)",
+					"oklch(0.49 0.236 328)",
+					"oklch(0.62 0.20 328)",
+					"oklch(0.74 0.15 328)",
+					"oklch(0.86 0.10 328)",
+					"oklch(0.95 0.04 328)"
+				]
+			},
+			"background-light": {
+				"role": "background",
+				"displayName": "White Ink",
+				"canonical": "#ffffff",
+				"tonalRamp": [
+					"oklch(0.18 0 0)",
+					"oklch(0.30 0 0)",
+					"oklch(0.42 0 0)",
+					"oklch(0.55 0 0)",
+					"oklch(0.68 0 0)",
+					"oklch(0.80 0 0)",
+					"oklch(0.92 0 0)",
+					"oklch(0.98 0 0)"
+				]
+			},
+			"background-dark": {
+				"role": "background",
+				"displayName": "Zinc-950 Ink",
+				"canonical": "#09090b",
+				"tonalRamp": [
+					"oklch(0.18 0 0)",
+					"oklch(0.30 0 0)",
+					"oklch(0.42 0 0)",
+					"oklch(0.55 0 0)",
+					"oklch(0.68 0 0)",
+					"oklch(0.80 0 0)",
+					"oklch(0.92 0 0)",
+					"oklch(0.98 0 0)"
+				]
+			},
+			"border-light": {
+				"role": "border",
+				"displayName": "Zinc-200 Rule",
+				"canonical": "#e4e4e7",
+				"tonalRamp": [
+					"oklch(0.30 0 0)",
+					"oklch(0.42 0 0)",
+					"oklch(0.55 0 0)",
+					"oklch(0.68 0 0)",
+					"oklch(0.78 0 0)",
+					"oklch(0.88 0 0.005)",
+					"oklch(0.94 0 0.004)",
+					"oklch(0.98 0 0.003)"
+				]
+			},
+			"border-dark": {
+				"role": "border",
+				"displayName": "Zinc Opacity Rule",
+				"canonical": "rgba(250, 250, 250, 0.10)",
+				"tonalRamp": [
+					"rgba(250, 250, 250, 0.04)",
+					"rgba(250, 250, 250, 0.06)",
+					"rgba(250, 250, 250, 0.08)",
+					"rgba(250, 250, 250, 0.10)",
+					"rgba(250, 250, 250, 0.14)",
+					"rgba(250, 250, 250, 0.20)",
+					"rgba(250, 250, 250, 0.32)",
+					"rgba(250, 250, 250, 0.48)"
+				]
+			},
+			"success": {
+				"role": "status",
+				"displayName": "Success Lime",
+				"canonical": "#86efac",
+				"tonalRamp": [
+					"oklch(0.30 0.10 144)",
+					"oklch(0.45 0.13 144)",
+					"oklch(0.62 0.14 144)",
+					"oklch(0.75 0.16 144)",
+					"oklch(0.85 0.16 144)",
+					"oklch(0.92 0.13 144)",
+					"oklch(0.96 0.08 144)",
+					"oklch(0.98 0.04 144)"
+				]
+			}
+		},
+		"typographyMeta": {
+			"display": {
+				"displayName": "Display",
+				"purpose": "Hero h1 only; carries the gradient cut."
+			},
+			"headline": {
+				"displayName": "Headline",
+				"purpose": "Page h1 / article titles (3.052rem modular scale)."
+			},
+			"title": {
+				"displayName": "Title",
+				"purpose": "Section h2/h3 and card titles."
+			},
+			"body": {
+				"displayName": "Body",
+				"purpose": "Reading measure: 720px max-width on blog posts; line-height 1.7."
+			},
+			"label": {
+				"displayName": "Label",
+				"purpose": "Nav, button text at sm size, repo language / stars, skill card heading."
+			}
+		},
+		"shadows": [
+			{
+				"name": "ambient-hover-lift",
+				"value": "0 20px 40px rgba(0, 0, 0, 0.10)",
+				"purpose": "Bento card hover lift on the homepage."
+			},
+			{
+				"name": "repo-hover-lift",
+				"value": "0 12px 24px rgba(0, 0, 0, 0.15)",
+				"purpose": "Repo card hover lift inside the GitHub repos card."
+			},
+			{
+				"name": "chip-elevation",
+				"value": "0 4px 12px rgba(0, 0, 0, 0.15)",
+				"purpose": "Static elevation for the featured-post chip on the blog index."
+			},
+			{
+				"name": "hero-image-shadow",
+				"value": "0 2px 6px rgba(96, 115, 159, 25%), 0 8px 24px rgba(96, 115, 159, 33%), 0 16px 32px rgba(96, 115, 159, 33%)",
+				"purpose": "Three-layer blue-tinted shadow; permanent on hero images inside blog posts. Makes the hero image feel like an artifact."
+			}
+		],
+		"motion": [
+			{
+				"name": "ease-standard",
+				"value": "cubic-bezier(0.4, 0, 0.2, 1)",
+				"purpose": "Default easing for state transitions (bento hover, repo card hover, social link hover)."
+			},
+			{
+				"name": "duration-lift",
+				"value": "0.4s",
+				"purpose": "Used on transform / shadow transitions for bento / repo cards."
+			},
+			{
+				"name": "duration-quick",
+				"value": "0.3s",
+				"purpose": "Social link transform, skill-item transform."
+			},
+			{
+				"name": "duration-micro",
+				"value": "0.2s",
+				"purpose": "External link opacity, view-all arrow translateX."
+			},
+			{
+				"name": "ease-tabs",
+				"value": "ease-out",
+				"purpose": "Starwind accordion / dropdown open/close motion."
+			}
+		],
+		"breakpoints": [
+			{ "name": "md", "value": "768px" },
+			{ "name": "lg", "value": "1024px" }
+		]
+	},
+	"components": [
+		{
+			"name": "Primary Button",
+			"kind": "button",
+			"refersTo": "button-primary",
+			"description": "Filled confirmation control. The default CTA surface — used sparingly, per the One-Voice Rule.",
+			"html": "<button class=\"ds-btn-primary\" type=\"button\"><span>Say Hello</span></button>",
+			"css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem; height: 2.75rem; padding: 0.5rem 1rem; border-radius: calc(var(--radius) - 0.125rem); background: var(--primary); color: var(--primary-foreground); font-family: 'Karla Variable', system-ui, sans-serif; font-size: 1rem; font-weight: 500; line-height: 1.3; white-space: nowrap; border: none; outline: none; cursor: pointer; transition: all 0.2s ease; } .ds-btn-primary:hover { background: rgba(21, 128, 61, 0.9); } .ds-btn-primary:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 50%, transparent); } .ds-btn-primary[disabled] { opacity: 0.5; pointer-events: none; }"
+		},
+		{
+			"name": "Ghost Button (Nav)",
+			"kind": "button",
+			"refersTo": "button-ghost",
+			"description": "The default nav variant. Carries the header route buttons; quietest of the variants.",
+			"html": "<button class=\"ds-btn-ghost\" type=\"button\"><span>Blog</span></button>",
+			"css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem; width: 2.75rem; height: 2.75rem; padding: 0; border-radius: calc(var(--radius) - 0.125rem); background: transparent; color: var(--foreground); font-family: 'Karla Variable', system-ui, sans-serif; font-size: 1rem; font-weight: 500; line-height: 1.3; white-space: nowrap; border: none; outline: none; cursor: pointer; transition: all 0.2s ease; } .ds-btn-ghost:hover { background: var(--muted); color: var(--foreground); } .ds-btn-ghost:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--outline) 50%, transparent); } .ds-btn-ghost[aria-current=\"page\"] { color: var(--primary); border-bottom: 4px solid var(--primary); }"
+		},
+		{
+			"name": "Outline Button",
+			"kind": "button",
+			"refersTo": "button-outline",
+			"description": "Bordered quiet control with hover-muted fill. For secondary actions that should not visually compete with primary CTAs.",
+			"html": "<button class=\"ds-btn-outline\" type=\"button\"><span>View CV</span></button>",
+			"css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem; height: 2.75rem; padding: 0.5rem 1rem; border-radius: calc(var(--radius) - 0.125rem); background: var(--background); color: var(--foreground); font-family: 'Karla Variable', system-ui, sans-serif; font-size: 1rem; font-weight: 500; line-height: 1.3; white-space: nowrap; border: 1px solid var(--input); box-shadow: 0 1px 2px rgba(0,0,0,0.05); outline: none; cursor: pointer; transition: all 0.2s ease; } .ds-btn-outline:hover { background: var(--muted); color: var(--foreground); border-color: var(--outline); } .ds-btn-outline:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--outline) 50%, transparent); border-color: var(--outline); }"
+		},
+		{
+			"name": "Bento Card",
+			"kind": "card",
+			"refersTo": "card-bento",
+			"description": "The homepage signature surface. Flat at rest, lifts on hover via the gradient wash and shadow.",
+			"html": "<article class=\"ds-card-bento\"><h2 class=\"ds-card-bento__title\">Key Skills</h2><p class=\"ds-card-bento__body\">Full-stack development with an emphasis on efficiency and usability.</p></article>",
+			"css": ".ds-card-bento { position: relative; overflow: hidden; background: var(--card); border: 1px solid var(--border); border-radius: calc(var(--radius) + 0.25rem); padding: 2rem; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); } .ds-card-bento::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); opacity: 0; transition: opacity 0.4s ease; pointer-events: none; z-index: 0; } .ds-card-bento:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10); border-color: var(--primary-accent); } .ds-card-bento:hover::before { opacity: 0.03; } .ds-card-bento > * { position: relative; z-index: 1; } .ds-card-bento__title { font-family: 'Karla Variable', system-ui, sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--foreground); margin: 0 0 1rem 0; line-height: 1.3; } .ds-card-bento__body { font-family: 'Karla Variable', system-ui, sans-serif; font-size: 1.125rem; line-height: 1.7; color: var(--foreground); margin: 0; }"
+		},
+		{
+			"name": "Objective Card (Bento Variant)",
+			"kind": "card",
+			"refersTo": "card-bento-overlay-primary",
+			"description": "A bento card where the primary token becomes the full-bleed background. Used by the Objectives block on the homepage. Light/dark resolution quirk: in light mode, --primary and --primary-accent both resolve to green-700, so the gradient collapses to a flat green — the gradient only visibly differentiates in dark mode where --primary pivots to Authorize-Blue (blue-700) and --primary-accent to blue-400 (Authorize-Blue Accent).",
+			"html": "<article class=\"ds-card-objective\"><h2 class=\"ds-card-objective__title\">Objectives</h2><p class=\"ds-card-objective__body\">To expand my knowledge areas, generate visible and lasting results, adapt to change with ease, motivate teams, and promote effective communication.</p></article>",
+			"css": ".ds-card-objective { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-accent) 100%); border: 1px solid var(--border); border-radius: calc(var(--radius) + 0.25rem); padding: 2rem; color: var(--primary-foreground); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); } .ds-card-objective__title { font-family: 'Karla Variable', system-ui, sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--primary-foreground); margin: 0 0 1rem 0; line-height: 1.3; } .ds-card-objective__body { font-family: 'Karla Variable', system-ui, sans-serif; font-size: 1.125rem; line-height: 1.7; color: var(--primary-foreground); margin: 0; }"
+		},
+		{
+			"name": "Repo Card",
+			"kind": "card",
+			"refersTo": "card-repo",
+			"description": "Compact card showing a single GitHub repository. Distinct hover recipe (smaller shadow, lighter wash).",
+			"html": "<a class=\"ds-card-repo\" href=\"https://github.com/mcendon/photoops\" target=\"_blank\" rel=\"noopener noreferrer\"><div class=\"ds-card-repo__header\"><h3 class=\"ds-card-repo__name\">photoops</h3><svg class=\"ds-card-repo__external\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z\"/></svg></div><p class=\"ds-card-repo__desc\">A single-file OpenCV script that deskews and crops batch-scanned photos.</p><div class=\"ds-card-repo__footer\"><span class=\"ds-card-repo__lang\"><span class=\"ds-card-repo__lang-dot\"></span>Python</span><span class=\"ds-card-repo__stars\">★ 12</span></div></a>",
+			"css": ".ds-card-repo { position: relative; overflow: hidden; display: flex; flex-direction: column; padding: 1.25rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); color: var(--foreground); text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); } .ds-card-repo::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, var(--primary-accent) 0%, var(--secondary-accent) 100%); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; z-index: 0; } .ds-card-repo:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); border-color: var(--primary-accent); } .ds-card-repo:hover::before { opacity: 0.05; } .ds-card-repo > * { position: relative; z-index: 1; } .ds-card-repo__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; } .ds-card-repo__name { font-family: 'Karla Variable', system-ui, sans-serif; font-size: 1rem; font-weight: 600; color: var(--foreground); margin: 0; line-height: 1.3; } .ds-card-repo__external { opacity: 0.5; flex-shrink: 0; transition: opacity 0.2s ease; } .ds-card-repo:hover .ds-card-repo__external { opacity: 1; } .ds-card-repo__desc { font-family: 'Karla Variable', system-ui, sans-serif; font-size: 0.875rem; line-height: 1.5; color: var(--muted-foreground); margin: 0 0 auto 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; } .ds-card-repo__footer { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; font-family: 'Karla Variable', system-ui, sans-serif; font-size: 0.75rem; color: var(--muted-foreground); } .ds-card-repo__lang { display: flex; align-items: center; gap: 0.375rem; } .ds-card-repo__lang-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--primary); display: inline-block; }"
+		},
+		{
+			"name": "Social Link",
+			"kind": "custom",
+			"refersTo": "social-link",
+			"description": "Hero social-link pill (LinkedIn / GitHub) with wash-on-hover gradient and per-brand hover border accent.",
+			"html": "<a class=\"ds-social-link\" href=\"https://www.linkedin.com/in/maurocendonhidalgo/\" target=\"_blank\" rel=\"noopener noreferrer\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z\"/></svg><span>LinkedIn</span></a>",
+			"css": ".ds-social-link { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--background); color: var(--foreground); border: 2px solid var(--border); border-radius: var(--radius-lg); font-family: 'Karla Variable', system-ui, sans-serif; font-weight: 600; text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); } .ds-social-link::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; } .ds-social-link:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); border-color: var(--primary-accent); } .ds-social-link:hover::before { opacity: 0.10; } .ds-social-link svg, .ds-social-link span { position: relative; z-index: 1; } /* Per-brand hover border accents. Explicit exceptions to the two-tone rule; see colors.link-accent-linkedin and colors.link-accent-github in DESIGN.md frontmatter. */ .ds-social-link[data-brand=\"linkedin\"]:hover { border-color: var(--linkedin, #0077b5); } .ds-social-link[data-brand=\"github\"]:hover { border-color: var(--github, #333333); }"
+		},
+		{
+			"name": "Featured-post Chip",
+			"kind": "chip",
+			"refersTo": "featured-post-chip",
+			"description": "Status badge overlaid on the featured blog-post card. Static elevation; never an interactive element.",
+			"html": "<span class=\"ds-chip-featured\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M21 4H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM9 18H7v-7h2v7zm4 0h-2V8h2v10zm4 0h-2v-4h2v4z\"/></svg><span>Featured</span></span>",
+			"css": ".ds-chip-featured { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--primary); color: var(--primary-foreground); border-radius: var(--radius-lg); font-family: 'Karla Variable', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); }"
+		},
+		{
+			"name": "Hero Gradient Heading",
+			"kind": "custom",
+			"refersTo": "hero-gradient-text",
+			"description": "The homepage name heading — display weight with the trust-to-capability gradient cut.",
+			"html": "<h1 class=\"ds-hero-heading\"><span class=\"ds-hero-heading__gradient\">Mauro Cendón Hidalgo</span></h1>",
+			"css": ".ds-hero-heading { font-family: 'Karla Variable', system-ui, sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin: 0 0 1rem 0; } .ds-hero-heading__gradient { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; display: inline-block; }"
+		},
+		{
+			"name": "Hero Image (BlogPost)",
+			"kind": "custom",
+			"refersTo": "card-image-hero",
+			"description": "The hero image at the top of a blog post — 70% width, 12px corner radius, three-layer blue-tinted shadow that is *permanent* on the image plane (does not respond to interaction). One of the few surfaces with a static shadow by intent.",
+			"html": "<figure class=\"ds-hero-image\"><img src=\"/photoops/hero.png\" alt=\"From a shoebox of memories to a tiny OpenCV script\" class=\"ds-hero-image__img\" /></figure>",
+			"css": ".ds-hero-image { width: 70%; margin: 0 auto; } .ds-hero-image__img { display: block; margin: 0 auto; max-width: 100%; height: auto; border-radius: 0.75rem; box-shadow: 0 2px 6px rgba(96, 115, 159, 25%), 0 8px 24px rgba(96, 115, 159, 33%), 0 16px 32px rgba(96, 115, 159, 33%); } @media (max-width: 767px) { .ds-hero-image { width: 100%; } }"
+		}
+	],
+	"narrative": {
+		"northStar": "The Pro-Dashboard",
+		"overview": "The site is laid out like the dashboard a senior engineer would assemble for a hiring decision-maker: each card answers one question, signals are honest, controls behave predictably. Layout is dense without being noisy; motion is purposeful but invisible until called. Surfaces stay calm at rest; lift only signals an interaction. The long-form blog is the proof surface beneath the dashboard — same vocabulary, lower stimulation.\n\nAesthetic posture: confident, restrained, technical. The site is not trying to impress; it is trying to be useful. Color carries signal, not decoration. Type is a single humanist sans (Karla). The light / dark toggle is a deliberate duality: in light the system reads recruiter-safe and quiet; in dark it pivots the primary to a more capable blue and the secondary to capability-fuchsia, communicating that the same work holds up with different emphasis.",
+		"keyCharacteristics": [
+			"Recruiter-fast. Homepage bento is an answer sheet. Every card answers one recruiter question.",
+			"Lift-on-Cue. Borders and tokens carry structure at rest. Translation + shadow appear only on hover, focus, or active state.",
+			"Editorial components. Cards have generous internal padding and restrained shadows. Nav and ghost buttons do most of the talking; filled CTAs appear sparingly.",
+			"Trust-Green & Client-Safe Blue. Light palette reads reliable, not loud. Capability signals live in the underside color choices, not the surface.",
+			"Karla, alone. A single humanist sans carries display, body, and labels. No serif accent, no mono for UI text.",
+			"Light by default, dark by intent. The light/dark toggle exists and the dark variant pivots both primaries — it is a duality the user can lean into."
+		],
+		"rules": [
+			{
+				"name": "The Hero-Gradient Rule",
+				"body": "The double gradient linear-gradient(135deg, primary → secondary) appears on exactly three places: (1) .gradient-text on the hero h1, (2) .bento-item::before hover wash, and (3) .social-link::before hover wash. Its rarity is the point. Any new use beyond those three is signal dilution.",
+				"section": "colors"
+			},
+			{
+				"name": "The One-Voice Rule",
+				"body": "In light mode, primary appears on the hero h1 gradient start, the objectives card full-bleed, social link default border, repo language dots, and the link:hover color — roughly 5–6 surfaces in any single homepage scroll. Its density on a single page must not exceed that. Dark mode authorizes a slightly higher density; the same rule of restraint still applies.",
+				"section": "colors"
+			},
+			{
+				"name": "The One-Family Rule",
+				"body": "Karla is the only UI typeface. Future surfaces that want a second typeface must justify it against the principle Evidence over claim — a second font adds visual noise without serving recruiter-fast reading.",
+				"section": "typography"
+			},
+			{
+				"name": "The Lift-on-Cue Rule",
+				"body": "Surfaces are flat at rest. Borders carry structure. Translation (translateY(-2px) for buttons, translateY(-4px) for cards) and shadows appear only on hover, focus-visible, or active. Never assign a static box-shadow to a controlled surface.",
+				"section": "elevation"
+			},
+			{
+				"name": "The Wash-on-Hover Rule",
+				"body": "The hover treatment on .bento-item, .social-link, and .repo-card includes a ::before pseudo-element with linear-gradient(135deg, primary → secondary) and opacity: 0; transition: opacity 0.4s ease;. Hover lifts opacity to 0.03 (bento), 0.10 (social links), or 0.05 (repo cards). The gradient wash is silent evidence of brand consistency — it should not be replaced with a flat color tint.",
+				"section": "elevation"
+			}
+		],
+		"dos": [
+			"Anchor every new surface on var(--primary), var(--secondary), var(--border), var(--muted-foreground), var(--radius-*), and the typography scale. If a new surface feels ready to introduce a token that isn't in the frontmatter, that is a signal to pause.",
+			"Default to flat surfaces. Borders carry structure. Reach for shadow only when a state requires elevation.",
+			"Use translateY(-4px) + a layered box-shadow + the primary→secondary 135° gradient wash as the canonical hover lift on bento cards. Don't invent a new hover recipe.",
+			"Use linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) on the hero h1 via background-clip: text. That's the brand voice in one move.",
+			"Keep the .prose reading measure at width: 720px; max-width: calc(100% - 2em); margin: auto; on blog posts. This is part of the typography contract.",
+			"Use rounded-md for buttons, rounded-lg for nav and repo cards, rounded-xl for bento cards, 0.75rem for hero images. These four values are the radii vocabulary.",
+			"Test light and dark. The dark pivot (green → blue, blue → fuchsia) is a real duality. A surface that reads in light but fails in dark is not finished."
+		],
+		"donts": [
+			"Introduce a third accent color. The system is two-tone (primary + secondary); the dark pivot authorizes a different two-tone, not a third color.",
+			"Use uppercase as a styling device. Labels, buttons, and chips are sentence case throughout.",
+			"Add additional portrait imagery. PRODUCT.md binds a single approved portrait at src/assets/images/about/mauro-snow.jpg.",
+			"Add box shadows on rest-state cards, buttons, or inputs. Static shadows contradict the lift-on-cue posture.",
+			"Paint the footer with extra social icons, links, or legalese. The footer is a closing mark.",
+			"Use a serif or mono UI font. Karla is the entire system.",
+			"Surface personal-life content (guitar, fishing, music, partner) outside the About page without first re-deciding the binding in PRODUCT.md.",
+			"Wire the Donate component into the header or sidebar until PRODUCT.md binds Donate as a real surface or removes it.",
+			"Rename or restructure the headline sizes. Display, headline, title, body, label are the five; never collapse two of them."
+		]
+	}
+}

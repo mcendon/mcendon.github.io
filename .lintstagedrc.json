@@ -1,4 +1,4 @@
 {
-	"*.{js,mjs,cjs,ts,tsx,astro}": ["eslint --fix", "git add"],
+	"./src/**/*.{js,mjs,cjs,ts,tsx,astro}": ["eslint --fix", "git add"],
 	"*.{json,md,mdx}": ["prettier --write", "git add"]
 }
